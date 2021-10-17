@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" />
+    <title>Paises</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./estilos/app.css" />
+  </head>
+
+  <body>
+    <div class="painel_p" id="painel_p">
+      <h1>Informações de Países</h1>
+
+      <div class="carregando" role="status" id="carregando">
+      </div>
+      <div class="carregando_t" id="carregando_t"><p>Carregando os dados...</p></div>
+
+      <div class="selec_div">
+        <select class="selec_cl" name="selec_paises" id="selec_paises">
+          <option>Escolha um país:</option>
+        </select>
+      </div>
+
+      <div class="card" id="card_pais">
+        <div class="bandeira">
+          <img id="bandeira" />
+        </div>
+        <div class="info">
+          <span class="ps_span"></span>
+          <h1 id="nome">Nome</h1>
+          <div class="info_row">
+            <p><b>Nome Oficial:&ensp;</b></p>
+            <p id="nomeOficial">Nome Oficial</p>
+          </div>
+
+          <div class="info_row">
+            <p><b>Capital:&ensp;</b></p>
+            <p id="capital">Capital</p>
+          </div>
+          <div class="info_row">
+            <p><b>Região:&ensp;</b></p>
+            <p id="regiao">Região</p>
+          </div>
+          <div class="info_row">
+            <p><b>Sub-região:&ensp;</b></p>
+            <p id="subregiao">Sub-região</p>
+          </div>
+          <div class="info_row">
+            <p><b>População:&ensp;</b></p>
+            <p id="populacao">População</p>
+          </div>
+          <div class="info_row">
+            <p><b>Area:&ensp;</b></p>
+            <p id="area">Area</p>
+          </div>
+          <div class="info_row">
+            <p><b>Fuso-horário:&ensp;</b></p>
+            <p id="fusohorario">Fuso horário</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <a id="bx_csv" download="paises.csv">Baixar dados em CSV</a>
+
+    <div class="erro_ocor" id="erro_ocor">
+      <h1>Ups...Ocorreu um erro :(</h1>
+      <ul>
+        <li>Tente recarregar a página</li>
+        <li>Verifique a sua conexão a internet</li>
+        <li>Tente mais tarde</li>
+      </ul>
+    </div>
+
+    <script type="module" src="./app/app.js"></script>
+  </body>
+</html>

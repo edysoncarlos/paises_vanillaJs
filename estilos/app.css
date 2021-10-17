@@ -1,0 +1,136 @@
+/* Corpo */
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #004882;
+  align-content: center;
+  align-items: center;
+}
+h1,
+ul,
+p,
+a,
+.carregando_t {
+  font-family: "Century Gothic Regular", Tahoma, Verdana, sans-serif;
+  color: azure;
+}
+a {
+  margin-top: 50px;
+}
+
+.ps_span {
+  display: inline-block;
+  width: 140px;
+  height: 7px;
+  background-color: #0374d1;
+  margin-bottom: 33px;
+}
+.carregando {
+  border: 16px solid azure;
+  border-radius: 50%;
+  border-top: 16px solid #0374d1;
+  width: 10px;
+  height: 10px;
+  -webkit-animation: spin 3s linear infinite;
+  animation: spin 3s linear infinite;
+}
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Lista d/seleccao de pais */
+select {
+  font-family: "Roboto", Tahoma, Verdana, sans-serif;
+}
+.painel_p {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+.selec_div select {
+  background-color: #0374d1;
+  color: white;
+  font-size: 20px;
+  padding: 15px;
+  width: auto;
+  border: none;
+  box-shadow: 0 7px 30px rgba(0, 0, 0, 0.3);
+}
+select::-ms-expand {
+  display: none;
+}
+
+/* Visualizar Pais */
+.card {
+  background-color: azure;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+  box-shadow: 0 7px 30px rgba(0, 0, 0, 0.3);
+}
+.card h1 {
+  color: #004882;
+}
+.card p {
+  color: #004882;
+}
+.bandeira {
+  height: auto;
+  width: auto;
+  margin: 30px;
+  background-position: center;
+}
+.info {
+  margin: 50px 50px 50px;
+}
+.info_row {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Responsividade*/
+@media (max-width: 360px) {
+  .painel_p {
+    flex-direction: column;
+    width: 280px;
+  }
+  .selec_div select {
+    width: 270px;
+  }
+}
+@media (min-width: 375px) {
+  .painel_p {
+    flex-direction: column;
+    width: auto;
+  }
+  .selec_div select {
+    width: 300px;
+  }
+}
+@media (min-width: 800px) {
+  .card {
+    flex-direction: row;
+    width: auto;
+  }
+  .selec_div select {
+    width: auto;
+  }
+}
