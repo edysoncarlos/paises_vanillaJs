@@ -10,7 +10,7 @@ h1,
 ul,
 p,
 a,
-.carregando_t {
+.loading-text {
   font-family: "Century Gothic Regular", Tahoma, Verdana, sans-serif;
   color: azure;
 }
@@ -18,7 +18,7 @@ a {
   margin-top: 50px;
 }
 
-.ps_span {
+.ps-span {
   display: inline-block;
   width: 140px;
   height: 7px;
@@ -56,14 +56,14 @@ a {
 select {
   font-family: "Roboto", Tahoma, Verdana, sans-serif;
 }
-.painel_p {
+.painel-p {
   width: auto;
   display: flex;
   flex-direction: column;
   align-content: center;
   align-items: center;
 }
-.selec_div select {
+.selec-div select {
   background-color: #0374d1;
   color: white;
   font-size: 20px;
@@ -101,27 +101,27 @@ select::-ms-expand {
 .info {
   margin: 50px 50px 50px;
 }
-.info_row {
+.info-row {
   display: flex;
   flex-direction: row;
 }
 
 /* Responsividade*/
 @media (max-width: 360px) {
-  .painel_p {
+  .painel-principal {
     flex-direction: column;
     width: 280px;
   }
-  .selec_div select {
+  .selec-div select {
     width: 270px;
   }
 }
 @media (min-width: 375px) {
-  .painel_p {
+  .painel-principal {
     flex-direction: column;
     width: auto;
   }
-  .selec_div select {
+  .selec-div select {
     width: 300px;
   }
 }
@@ -130,7 +130,7 @@ select::-ms-expand {
     flex-direction: row;
     width: auto;
   }
-  .selec_div select {
+  .selec-div select {
     width: auto;
   }
 }
