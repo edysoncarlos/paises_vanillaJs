@@ -13,6 +13,6 @@ export const d_carregando_t = document.getElementById("carregando_texto");
 export const d_card_pais = document.getElementById("card_pais");
 export const d_painel = document.getElementById("painel_p");
 export const d_erro = document.getElementById("erro_ocor");
-export const bx_csv = document.getElementById("bx_csv");
+export const baixar_csv = document.getElementById("baixar_csv");
 
 

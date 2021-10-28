@@ -7,7 +7,7 @@ dom.d_card_pais.style.display = "none";
 dom.d_erro.style.display = "none";
 dom.d_sel_paises.style.display = "none";
 dom.d_carregando_t.style.display = "none";
-dom.bx_csv.style.display = "none";
+dom.baixar_csv.style.display = "none";
 
 //Busca da API
 export async function chamarApi(api) {
@@ -31,7 +31,7 @@ function certCarregamento() {
   dom.d_carregando.style.display = "none";
   dom.d_carregando_t.style.display = "none";
   dom.d_sel_paises.style.display = "";
-  dom.bx_csv.style.display = "";
+  dom.baixar_csv.style.display = "";
 }
 function reportarErro() {
   dom.d_painel.style.display = "none";
@@ -93,15 +93,15 @@ function jsonParaCsv(lista_rec) {
     m_json = [
       ...m_json,
       {
-        "Nome": sp.translations.por.common,
-        "Nome Oficial": sp.translations.por.official,
-        "Capital": sp.capital,
-        "Região": sp.region,
-        "Sub-Região": sp.subregion,
-        "População": sp.population,
-        "Area": sp.area,
-        "Fuso horário": sp.timezones,
-      },
+        'Nome': sp.translations.por.common,
+        'Nome Oficial': sp.translations.por.official,
+        'Capital': sp.capital,
+        'Região': sp.region,
+        'Sub-Região': sp.subregion,
+        'População': sp.population,
+        'Area': sp.area,
+        'Fuso horário': sp.timezones
+      }
     ];
   }
 
@@ -113,5 +113,5 @@ function jsonParaCsv(lista_rec) {
       m_json.map((r) => chaves.map((chave) => r[chave]).join(",")).join("\n"),
     ].join("\n");
   const csvBlob = new Blob([conS], { type: "text/csv;charset=utf-8" });
-  conf.bx_csv.href = URL.createObjectURL(csvBlob);
+  dom.baixar_csv.href = URL.createObjectURL(csvBlob);
 }

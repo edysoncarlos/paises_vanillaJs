@@ -56,7 +56,7 @@ a {
 select {
   font-family: "Roboto", Tahoma, Verdana, sans-serif;
 }
-.painel-p {
+.painel-principal {
   width: auto;
   display: flex;
   flex-direction: column;
